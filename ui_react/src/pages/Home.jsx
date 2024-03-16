@@ -3,12 +3,9 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      HOME
-      HOME
-      HOME
-      HOME
-      HOME
-      
+     <div class=" bg-blue-200 w-screen h-screen items-center text-center">
+   &nbsp;<br/>HOME
+</div>
     </div>
   )
 }
