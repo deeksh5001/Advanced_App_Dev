@@ -1,39 +1,25 @@
 import React from 'react'
+import logo from '../../assets/Images/corpify.png'
 import { NavLink } from 'react-router-dom'
 import '../../assets/CSS/core.css'
-import logo from '../../assets/Images/logo1.png'
+import { UserIcon } from 'lucide-react'
 
-const Navbar = () => {
-  const links=[
-    {
-      name:'Home',
-      path:'/'
-    },
-    {
-      name:'Register',
-      path:'/register'
-    },
-    {
-      name:'Login',
-      path:'/login'
-    },
-    {
-      name:'Contact',
-      path:'/contact'
-    },
-    
-  ]
+const UserTopbar = () => {
+    const links=[
+        
+        {
+          name:'My Profile',
+          path:'/userProfile',
+          icon: <UserIcon/>
+        },
+        
+    ]
   return (
     <>
     <header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02">
 
     <h1 class="w-3/12">
-        <a href="">
-    
-        <img src={logo} style={{height:"50px"}}/>
-
-          
-        </a>
+        
     </h1>
 
    
@@ -42,9 +28,9 @@ const Navbar = () => {
             {
              
               links.map((link,index)=>(
-                <li className='p-4 border-b-2 border-purple-900 border-opacity-0 hover:border-opacity-100 hover:text-purple-800 duration-150 cursor-pointer'>
+                <li className='p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-800 duration-100 cursor-pointer'>
                 <NavLink key={index} to={link.path} className='cursor-pointer nav-link'>
-                  {link.name}
+                  {link.icon}
                 </NavLink>
                 </li>
     
@@ -61,4 +47,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default UserTopbar
