@@ -5,7 +5,7 @@ const AdminBookings = () => {
     <div>
 
   <div>
-    Bookings made are listed below
+  <h1 className='text-purple-800 font-bold text-3xl text-center'>ALL BOOKINGS</h1><br/>
 
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
           <table className="w-full text-sm text-left rtl:text-right text-black">
@@ -45,7 +45,7 @@ const AdminBookings = () => {
               </thead>
               <tbody>
                   {/* Sample data rows */}
-                  <tr className="bg-white-500 border-b border-blue-400">
+                  <tr className="bg-white-500 border-b border-purple-400">
                       <th className="px-6 py-4">1</th>
                       <td className="px-6 py-4">2</td>
                       <td className="px-6 py-4">Janani</td>
@@ -63,7 +63,7 @@ const AdminBookings = () => {
                       <td className="px-6 py-4">$599.00</td>
                   </tr>
                   {/* Add more rows with similar structure */}
-                  <tr className="bg-white-500 border-b border-blue-400">
+                  <tr className="bg-purple-100 border-b border-purple-400">
                       <th className="px-6 py-4">2</th>
                       <td className="px-6 py-4">3</td>
                       <td className="px-6 py-4">Deeksha</td>
@@ -80,7 +80,7 @@ const AdminBookings = () => {
                       <td className="px-6 py-4">40</td>
                       <td className="px-6 py-4">$1999.00</td>
                   </tr>
-                  <tr className="bg-white-500 border-b border-blue-400">
+                  <tr className="bg-white-500 border-b border-purple-400">
                       <th className="px-6 py-4">3</th>
                       <td className="px-6 py-4">5</td>
                       <td className="px-6 py-4">Deepak</td>

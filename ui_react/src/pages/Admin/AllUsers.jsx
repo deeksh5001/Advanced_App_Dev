@@ -4,9 +4,10 @@ const AllUsers = () => {
 
   return (
     <div>
+        <h1 className='text-purple-800 font-bold text-3xl text-center'>ALL USERS</h1><br/>
        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left rtl:text-right text-gray-900 dark:text-black-400 ">
-            <thead className="text-sm text-gray-700 uppercase bg-blue-300 dark:bg-purple-800 dark:text-white">
+            <thead className="text-sm text-gray-700 uppercase dark:bg-purple-800 dark:text-white">
                 <tr>
                     <th scope="col" className="px-6 py-3">
                         User ID
@@ -28,7 +29,7 @@ const AllUsers = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700">
+                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-purple-600">
                     <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">
                        1
                     </th>
@@ -46,7 +47,7 @@ const AllUsers = () => {
                     </td>
                     
                 </tr>
-                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700">
+                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-purple-600">
                     <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">
                        2
                     </th>
@@ -63,7 +64,7 @@ const AllUsers = () => {
                        ********
                     </td>                    
                 </tr>
-                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700">
+                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-purple-600">
                     <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">
                        3
                     </th>
@@ -80,7 +81,7 @@ const AllUsers = () => {
                        ********
                     </td>
                 </tr>
-                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700">
+                <tr className="odd:bg-white even:bg-gray-50 border-b dark:border-purple-600">
                     <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">
                        4
                     </th>

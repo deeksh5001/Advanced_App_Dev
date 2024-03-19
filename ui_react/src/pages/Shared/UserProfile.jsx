@@ -7,7 +7,7 @@ const UserProfile = () => {
     <section class=" bg-gray-100  bg-opacity-50 ">
       
       <div class="mx-auto container  shadow-md">
-        <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-indigo-400 rounded-t">
+        <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-purple-500 rounded-t">
           <div class="max-w-sm mx-auto md:w-full md:mx-0">
             <div class="inline-flex items-center space-x-4">
               <img
@@ -145,7 +145,7 @@ const UserProfile = () => {
             </div>
 
             <div class="md:w-3/12 text-center md:pl-6">
-              <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-indigo-400 py-2 px-2 inline-flex justify-center focus:outline-none md:float-right">
+              <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-purple-500 py-2 px-2 inline-flex justify-center focus:outline-none md:float-right">
                 
                 Change
               </button>
@@ -153,7 +153,7 @@ const UserProfile = () => {
           </div>
           <div class="w-full flex justify-start p-2 text-right text-gray-500">
            
-              <button class="text-white  max-w-sm rounded-md text-center bg-indigo-400 py-2 px-3 inline-flex justify-center focus:outline-none md:float-right">
+              <button class="text-white  max-w-sm rounded-md text-center bg-purple-500 py-2 px-3 inline-flex justify-center focus:outline-none md:float-right">
                 Edit profile
               </button>
           </div>

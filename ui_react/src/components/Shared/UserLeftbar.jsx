@@ -7,22 +7,22 @@ const UserLeftbar = () => {
     const links=[
         {
           name:'Dashboard',
-          path:'/userDashboard',
+          path:'/user/Dashboard',
           icon: <Home size={20} color="#800080" /> // Using Lucide React icon for Dashboard
         },
         {
           name:'Events',
-          path:'/userEvents',
+          path:'/user/Events',
           icon: <Calendar size={20} color="#800080" /> // Using Lucide React icon for Events
         },
         {
           name:'My Bookings',
-          path:'/userBookings',
+          path:'/user/Bookings',
           icon: <Book size={20} color="#800080" /> // Using Lucide React icon for My Bookings
         },
         {
           name:'My Payments',
-          path:'/userPayments',
+          path:'/user/Payments',
           icon: <CreditCard size={20} color="#800080" /> // Using Lucide React icon for My Payments
         },
     ];
@@ -35,7 +35,7 @@ const UserLeftbar = () => {
 
     return (
         <>
-            <div className='w-[16vw] shadow-md flex flex-col'>
+            <div className='w-[16vw] shadow-md flex flex-col '>
                 <br />
                 <h1 className="border-b-4 mt-[-18px] mb-0">
                     <a href="/">

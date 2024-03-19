@@ -9,7 +9,7 @@ const UserTopbar = () => {
         
         {
           name:'My Profile',
-          path:'/userProfile',
+          path:'/user/Profile',
           icon: <UserIcon/>
         },
         

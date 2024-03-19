@@ -63,7 +63,7 @@ const Login = () => {
           nav('/admin/Dashboard')
         }
         else{
-        nav('/userDashboard');
+        nav('/user/Dashboard');
         }
       }, 1000); // Adjust the delay as needed
     });
