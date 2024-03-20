@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarCheck, CalendarDays, IndianRupee, TabletSmartphone } from 'lucide-react';
+import { CalendarCheck, CalendarDays, DollarSign, IndianRupee, TabletSmartphone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const UserDashboard = () => {
@@ -34,7 +34,7 @@ const UserDashboard = () => {
         {/* Third Card */}
         <div className='p-5 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300'>
           <div className='flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-purple-200 rounded-full'>
-            <IndianRupee size={32} color='#6B46C1' />
+            <DollarSign size={32} color='#6B46C1' />
           </div>
           <h2 className='text-lg font-semibold text-center text-purple-800'>No. of Payments</h2>
           <p className='text-4xl text-purple-800 font-semibold text-center'>3</p>

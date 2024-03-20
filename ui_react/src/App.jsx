@@ -4,8 +4,8 @@ import Home from './pages/Home'
 import Login from './pages/Auth/Login'
 import Register from './pages/Auth/Register'
 const Contact=lazy(()=>import('./pages/Contact'))
+const Terms=lazy(()=>import('./pages/Terms'))
 import WebLayout from './layouts/WebLayout'
-import Terms from './pages/Terms'
 import UserDashboard from './pages/Shared/UserDashboard'
 import UserLayout from './layouts/UserLayout'
 import UserEvents from './pages/Shared/UserEvents'
@@ -20,7 +20,7 @@ import AdminPayments from './pages/Admin/AdminPayments'
 import AllUsers from './pages/Admin/AllUsers'
 import AdminBookings from './pages/Admin/AdminBookings'
 import AdminProfile from './pages/Admin/AdminProfile'
-
+import Error from './pages/Error'
 
 
 
@@ -53,6 +53,7 @@ const App = () => {
         <Route path='/admin/users' element={<AllUsers/>}/>
         <Route path='/admin/Profile' element={<AdminProfile />}/>
       </Route>
+      <Route path="*" element={<Error/>}/>
     </Routes>
     </Suspense>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Terms = () => {
   return (
-    <div className="container mx-auto p-8 shadow-lg mb-4 mt-3 bg-blue-100">
+    <div className="container mx-auto p-8 shadow-lg mb-4 mt-3 bg-purple-100">
       <h1 className="text-3xl font-semibold mb-4 text-center">Terms and Conditions</h1>
       <p className="mb-4 text-center">
         Welcome to our Corporate Event Management System! These terms and conditions outline the rules and regulations for the use of our platform.

@@ -28,7 +28,7 @@ const Navbar = () => {
     <header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02">
 
     <h1 class="w-3/12">
-        <a href="">
+        <a href="/">
     
         <img src={logo} style={{height:"50px"}}/>
 
