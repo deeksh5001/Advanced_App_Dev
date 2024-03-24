@@ -8,4 +8,7 @@ import com.deeksha.corpify.model.User;
 
 public interface UserRepo extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);
+    User findByUid(Long uid);
+
+    void deleteByUid(Long uid);
 }
