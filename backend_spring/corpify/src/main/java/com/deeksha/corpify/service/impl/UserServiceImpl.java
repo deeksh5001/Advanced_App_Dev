@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.deeksha.corpify.dto.request.UserRequest;
 import com.deeksha.corpify.dto.response.UserResponse;
 import com.deeksha.corpify.model.User;
+import com.deeksha.corpify.repository.JwtRepo;
 import com.deeksha.corpify.repository.UserRepo;
 import com.deeksha.corpify.service.UserService;
 
@@ -22,6 +23,8 @@ import lombok.RequiredArgsConstructor;
 public class UserServiceImpl implements UserService{
     @Autowired
 	UserRepo userRepository; 
+    @Autowired
+	JwtRepo tokenRepository; 
 	
     private final PasswordEncoder passwordEncoder;
 
@@ -34,7 +37,8 @@ public class UserServiceImpl implements UserService{
                 .collect(Collectors.toList());
 	}
 
-    public UserResponse updateUser(UserRequest request, Long uid) {
+
+	public UserResponse updateUser(UserRequest request, Long uid) {
 	        User user = userRepository.findByUid(uid);
 	        User newUser = new User();
 	        if (user != null) {
@@ -56,11 +60,16 @@ public class UserServiceImpl implements UserService{
 		User user = userRepository.findByUid(uid);
 	    return mapUserToUserRequest(user);
 	}
-
-    public boolean deleteUser(Long uid)
+	public boolean deleteUser(Long uid)
 	{
-		userRepository.deleteById(uid);
-		return true;
+		User user = userRepository.findByUid(uid);
+        if (user != null) {
+            tokenRepository.deleteByUserUid(uid);
+            userRepository.deleteByUid(uid);
+            return true;
+        } else {
+            return false;
+        }
 	}
     private UserResponse mapUserToUserResponse(User user) {
         return UserResponse.builder()

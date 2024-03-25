@@ -9,6 +9,6 @@ import com.deeksha.corpify.model.Token;
 
 public interface JwtRepo extends JpaRepository<Token, String>  {
     List<Token> findAllByUser_UidAndExpiredFalseAndRevokedFalse(Long uid);
-    
+    void deleteByUserUid(Long uid);
     Optional<Token> findByToken(String token);
 }

@@ -2,13 +2,10 @@ package com.deeksha.corpify.model;
 
 import java.sql.Date;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
@@ -24,7 +21,5 @@ public class Payment {
     private String pStatus;
     private Date pDate;
     private String pMode;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "bid")
-    private Booking booking;
+
 }
