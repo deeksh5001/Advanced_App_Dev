@@ -11,7 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 
 @Entity
-@Table(name = "t_payment")
+@Table(name = "t_payments")
 @Data
 @Builder
 public class Payment {
