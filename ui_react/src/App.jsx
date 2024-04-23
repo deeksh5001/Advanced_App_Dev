@@ -24,12 +24,14 @@ import Error from './pages/Error'
 
 
 
+
 const App = () => {
   return (
     <>
     <BrowserRouter>
     <Suspense fallback='Loading...'>   
     <Routes>
+
       <Route element={<WebLayout/>}>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<Login/>}></Route>

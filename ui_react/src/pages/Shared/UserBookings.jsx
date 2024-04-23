@@ -24,7 +24,7 @@ import toast, { Toaster } from 'react-hot-toast';
                   <form onSubmit={()=>{toast.success("Payment successful");setShowPopup(false);}}>
                     <div className="mb-6 flex items-center relative">
                       <User className="absolute flex items-center ml-2 text-purple-500" size={24} />
-                      <input type="text" id="cardholderName" placeholder="Cardholder Name" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
+                      <input required type="text" id="cardholderName" placeholder="Cardholder Name" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
                     </div>
                     <div className="mb-6 flex items-center relative">
                       <DollarSign className="absolute  flex items-center ml-2 text-purple-500" size={24} />
@@ -37,16 +37,16 @@ import toast, { Toaster } from 'react-hot-toast';
                     </div>
                     <div className="mb-6 flex items-center relative">
                       <CreditCard className="absolute  flex items-center ml-2 text-purple-500" size={24} />
-                      <input type="text" id="cardNumber" placeholder="Amount" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
+                      <input required type="text" id="cardNumber" placeholder="Amount" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
                     </div>
                     <div className="flex items-center justify-between mb-6">
                       <div className="w-1/2 mr-2 flex flex-row items-center relative">
                         <Calendar className="absolute  flex items-center ml-2 text-purple-500" size={24} />
-                        <input type="date" id="expiryDate" placeholder="Event Date" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
+                        <input required type="date" id="expiryDate" placeholder="Event Date" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
                       </div>
                       <div className="w-1/2 ml-2 flex items-center relative">
                         <Lock className="absolute  flex items-center ml-2 text-purple-500" size={24} />
-                        <input type="password" id="cvv" placeholder="Password" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
+                        <input required type="password" id="cvv" placeholder="Password" className="w-full p-3 pl-10 bg-grey-800 border border-purple-700 rounded-md focus:outline-none focus:border-purple-500" />
                       </div>
                     </div>
                     <div className="flex justify-between">

@@ -162,14 +162,9 @@ const UserProfile = () => {
               </div>
             </div>
 
-            <div class="md:w-3/12 text-center md:pl-6">
-              <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-purple-500 py-2 px-2 inline-flex justify-center focus:outline-none md:float-right">
-                
-                Change
-              </button>
-            </div>
+            
           </div>
-          <div class="w-full flex justify-start p-2 text-right text-gray-500">
+          <div class="w-full flex justify-end p-2 text-right text-gray-500">
           <button
             className="text-white max-w-sm rounded-md text-center bg-purple-500 py-2 px-3 inline-flex justify-center focus:outline-none md:float-right"
             onClick={handleEditClick}>
@@ -189,8 +184,8 @@ const UserProfile = () => {
               <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
               <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
               <div class="p-2 md:p-4">
-            <div class="w-full px-6 pb-8 mt-8 sm:max-w-xl sm:rounded-lg">
-                <h2 class="pl-6 text-2xl font-bold sm:text-xl">Public Profile</h2>
+            <div class="w-full px-4 pb-8 mt-4 sm:max-w-xl sm:rounded-lg">
+                <h2 class=" text-2xl font-bold sm:text-xl text-center">Public Profile</h2>
 
                 <div class="grid max-w-2xl mx-auto mt-8">
                     <div class="flex flex-col items-center space-y-5 sm:flex-row sm:space-y-0">
@@ -209,7 +204,7 @@ const UserProfile = () => {
   />
   <label
     htmlFor="profile-photo-upload" // Associate the label with the input element
-    className="py-3.5 px-7 text-base font-medium text-indigo-100 focus:outline-none bg-indigo-700 rounded-lg border border-indigo-200 hover:bg-indigo-900 focus:z-10 focus:ring-4 focus:ring-indigo-200 cursor-pointer"
+    className="py-3 px-7 text-base font-medium text-indigo-100 focus:outline-none bg-indigo-700 rounded-lg border border-indigo-200 hover:bg-indigo-900 focus:z-10 focus:ring-4 focus:ring-indigo-200 cursor-pointer"
   >
     Change picture
   </label>
@@ -217,7 +212,7 @@ const UserProfile = () => {
 
                     </div>
 
-                    <div class="items-center mt-8 sm:mt-14 text-[#202142]">
+                    <div class="items-center mt-8 sm:mt-10 text-[#202142]">
 
                         <div class="mb-2 sm:mb-6">
                             <label for="email"
@@ -242,6 +237,13 @@ const UserProfile = () => {
                             <label for="phone"
                                 class="block mb-2 text-sm font-medium text-indigo-900 ">Phone number</label>
                             <input type="text" id="phone"
+                                class="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
+                                placeholder="your profession" value="9345234512" required/>
+                        </div>
+                        <div class="mb-2 sm:mb-6">
+                            <label for="phone"
+                                class="block mb-2 text-sm font-medium text-indigo-900 ">Password</label>
+                            <input type="password" id="phone"
                                 class="bg-indigo-50 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                                 placeholder="your profession" value="9345234512" required/>
                         </div>
