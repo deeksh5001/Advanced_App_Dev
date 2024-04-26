@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast, {Toaster} from 'react-hot-toast'
-
+import { LogIn } from '../../services/Api';
+import { jwtDecode } from 'jwt-decode'
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -23,7 +24,7 @@ const Login = () => {
     return emailPattern.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Check if any field is empty
     for (const field in formData) {
@@ -43,32 +44,39 @@ const Login = () => {
 
     console.log(formData);
     localStorage.setItem('email',formData.email)
-    toast.promise(
-      new Promise((resolve) => {
-        // Simulate some asynchronous operation
-        setTimeout(() => {
-          resolve('Logged in successfully!');
-        }, 2000); // Adjust the delay as needed
-      }),
-      {
-        loading: 'Logging in...',
-        success: 'Logged in successfully!',
-        error: 'An error occurred while logging in.',
+    try {
+      const res = await LogIn(formData.email, formData.password)
+      if (res.status === 200) {
+          console.log(res);
+          const rawToken = res.data.accessToken;
+          const tokenDecode = jwtDecode(rawToken)
+          console.log(tokenDecode)
+          toast.success("Logged In Successfully")
+          if (tokenDecode.role) {
+              
+              if (tokenDecode.role === "User") {
+                  setTimeout(() => {
+                      nav('/user/Dashboard')
+                  }, 2000)
+              }
+              else if (tokenDecode.role === "Admin") {
+                  nav('/admin/Dashboard')
+              }
+              else {
+                  console.log("Error");
+                  toast.error("invalid email/password")
+              }
+          }
       }
-    ).then(() => {
-      // Navigate to the next page after the toast is closed or after a delay
-      setTimeout(() => {
-        if(formData.email=="admin@gmail.com")
-        {
-          nav('/admin/Dashboard')
-        }
-        else{
-        nav('/user/Dashboard');
-        }
-      }, 1000); // Adjust the delay as needed
-    });
-  };
-  
+      else if (res.status === 403) {
+          console.log("invalid email/password");
+          toast.error("invalid email/password")
+      }
+  }
+  catch (e) {
+      console.log(e);
+  }
+}
   
   return (
     <>

@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import toast, {Toaster} from 'react-hot-toast'
+import { SignUp } from '../../services/Api';
 
 const Register = () => {
   const nav=useNavigate();
@@ -37,7 +38,7 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Check if any field is empty
     for (const field in formData) {
@@ -70,6 +71,8 @@ const Register = () => {
     setErrors({ email: '', password: '' ,confirmPassword: ''});
 
     console.log(formData);
+    const res=await SignUp(formData.name,formData.email,formData.password,formData.phoneNumber);
+    console.log(res.status);
     toast.success("Successfully registered!");
     nav('/login')
     // You can add your form submission logic here
@@ -126,7 +129,7 @@ const Register = () => {
         <input
           className="text-md w-full px-4 py-2 border border-solid border-gray-400 rounded mt-5 outline-[#4a0677]"
           type="password"
-          id="password"
+          id="confirmPassword"
           name="confirmPassword"
           onChange={handleChange}
           placeholder="Confirm Password"
